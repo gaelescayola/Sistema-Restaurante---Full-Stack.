@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Servidor estático - Alumnos</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body class="w3-light-grey">
+
+  <header class="w3-container w3-blue w3-padding-16">
+    <h2 class="w3-center">Alumnos - Servidor estático con Express</h2>
+  </header>
+
+  <div class="w3-container w3-margin-top">
+    <div class="w3-card w3-white w3-padding">
+
+      <h4>Consultas (igual que en la práctica de Node)</h4>
+
+      <div class="w3-bar w3-margin-bottom">
+        <button class="w3-button w3-blue w3-margin-right" onclick="mostrarIDM()">
+          a) Alumnos IDM
+        </button>
+        <button class="w3-button w3-green w3-margin-right" onclick="mostrarISCYucatan()">
+          b) ISC de Yucatán
+        </button>
+        <button class="w3-button w3-red w3-margin-right" onclick="mostrarAlumnas()">
+          c) Todas las alumnas
+        </button>
+        <button class="w3-button w3-black" onclick="mostrarNombreCompleto()">
+          d) Id y nombre completo
+        </button>
+      </div>
+
+      <p id="descripcion" class="w3-small w3-text-grey"></p>
+
+      <div class="w3-responsive">
+        <table class="w3-table-all w3-small" id="tabla">
+          <!-- Se llena desde app.js -->
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="w3-container w3-center w3-padding-16">
+    <span class="w3-small">Actividad: Servidor estático Node + Express</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
