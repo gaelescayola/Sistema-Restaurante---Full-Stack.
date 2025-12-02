@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Panel de Administración</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:200px;">
+  <h3 class="w3-bar-item w3-teal">Administración</h3>
+  <a href="#" class="w3-bar-item w3-button" onclick="openTab('Usuarios')">Gestión de Usuarios</a>
+  <a href="#" class="w3-bar-item w3-button" onclick="openTab('Roles')">Gestión de Roles</a>
+  <a href="#" class="w3-bar-item w3-button" onclick="openTab('Categorias')">Gestión de Categorías</a>
+  <a href="#" class="w3-bar-item w3-button" onclick="openTab('Productos')">Gestión de Productos</a>
+  <a href="index.html" class="w3-bar-item w3-button w3-bottom w3-red">Cerrar Sesión</a>
+</div>
+
+<div style="margin-left:200px;">
+
+    <div class="w3-container w3-teal">
+        <h1>Panel de Control</h1>
+    </div>
+
+    <div id="Usuarios" class="w3-container tab" style="display:none;">
+        <h2>Gestión de Usuarios</h2>
+        <button class="w3-button w3-green w3-margin-bottom">+ Nuevo Usuario</button>
+        <table class="w3-table-all w3-hoverable">
+            <tr class="w3-light-grey">
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Rol</th>
+                <th>Acciones</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Juan Pérez</td>
+                <td>Mesero</td>
+                <td>
+                    <button class="w3-button w3-blue">Editar</button>
+                    <button class="w3-button w3-red">Eliminar</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div id="Productos" class="w3-container tab">
+        <h2>Gestión de Productos</h2>
+        <button class="w3-button w3-green w3-margin-bottom">+ Nuevo Producto</button>
+        <table class="w3-table-all w3-hoverable">
+            <tr class="w3-light-grey">
+                <th>ID</th>
+                <th>Nombre Producto</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>Tacos al Pastor</td>
+                <td>Comida</td>
+                <td>$15.00</td>
+                <td>
+                    <button class="w3-button w3-blue">Editar</button>
+                    <button class="w3-button w3-red">Eliminar</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    </div>
+
+<script>
+// Script simple para manejar las pestañas
+function openTab(tabName) {
+  var i;
+  var x = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+// Abrir la primera pestaña por defecto
+openTab('Productos');
+</script>
+
+</body>
+</html>
